@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+service GreeterService {
+  rpc foo (FooInput) returns (FooOutput) {}
+  rpc bar (BarInput) returns (BarOutput) {}
+}
+
+message Empty {}
+
+message FooInput {
+  string baz = 1;
+}
+
+message FooOutput {
+  string id = 1;
+  string name = 2;
+}
+
+message BarInput {
+  string baz = 1;
+}
+
+message BarOutput {
+  string id = 1;
+  string name = 2;
+}
